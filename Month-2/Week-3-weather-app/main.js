@@ -11,9 +11,15 @@ const searchInputBox = document.getElementById('input-box');
 searchInputBox.addEventListener('keypress', (event) => {
     
     if(event.keyCode == 13) {
+        if(searchInputBox.value == null || searchInputBox.value == ""){
+        errorMessage(searchInputBox);
+        }
+        else{
         console.log(searchInputBox.value);
         getWeatherReport(searchInputBox.value);
         document.querySelector('.weather-body').style.display = "block";
+        }
+        
     }
 
 });
@@ -86,6 +92,21 @@ function dateManage(dateArg) {
     let day = days[dateArg.getDay()];
 
     return `${date} ${month} (${day}), ${year}`;
+}
+
+//error management
+function errorMessage(searchInputBox) {
+    var error = document.getElementById("error")
+    if (searchInputBox.value == null || searchInputBox.value == "")
+        {
+ 
+            // Changing HTML to draw attention
+            error.innerHTML = "<span style='color: red;'>"+
+                        "Please enter a valid city </span>"
+        } else {
+            error.innerHTML = ""
+        }
+    
 }
 
 
