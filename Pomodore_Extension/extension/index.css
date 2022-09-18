@@ -12,6 +12,7 @@ body {
 #timer {
     background-color: rgb(77, 25, 161);
     padding: 10px 0 20px;
+    min-width: 400px;
 } 
 
 .buttons {
