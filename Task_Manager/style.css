@@ -18,20 +18,20 @@
   
   .status {
     width: 35%;
-    background-color: #4832c5;
+    background-color: #958e98;
     position: relative;
     padding: 60px 1rem 0.5rem;
   }
   
   .status:nth-child(even) {
-    background-color: #17bfee6b;
+    background-color: #c4c9cc;
   }
   
   .status h1 {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #d7821b;
+    background-color: #0079bf;
     color: #f3f3f3;
     margin: 0;
     width: 100%;
